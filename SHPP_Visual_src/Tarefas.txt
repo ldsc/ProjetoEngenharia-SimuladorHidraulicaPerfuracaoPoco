@@ -1,0 +1,50 @@
+
+=======================================
+Tarefas a serem feitas (correções)
+=======================================
+
+- O que estiver anotado no arquivo impresso.
+
+- Melhorar a formatação da saída, por exemplo aparece o seguinte:
+
+Os valores padrao do fluido de perfuracao polimerico sao: viscosidade = 25cp (centipoise) e densidade = 10ppg (ponds per gallon, ou libras por galoes).
+
+trocar por:
+Os valores padrao do fluido de perfuracao polimerico sao:
+viscosidade = 25cp (centipoise) 
+densidade = 10ppg (ponds per gallon, ou libras por galoes).
+
+pois ficou confuso.
+
+Trocar
+Entre com o nome do arquivo texto de onde deseja ler os dados da geometria do poco - diametro do poco (in), diametro externo do revestimento (in) e diametro interno do revestimento (in):
+
+Por
+Entre com o nome do arquivo texto de onde deseja ler os dados da geometria do poco:
+- diametro do poco (in), 
+- diametro externo do revestimento (in) 
+- diametro interno do revestimento (in).
+
+Os arquivos externos devem ter uma extensão específica, por exemplo:
+caso1.shpp
+Quando você pede para o usuário entrar com o nome do arquivo, imediatamente antes, deve listar os arquivos *.shpp
+ex: system ("dir *.shpp" );
+
+
+Se digitar a extensão basta procurar por "." e eliminar na string o que vem depois do ponto (inclusive).
+
+- quando solicitar as entrada de dados mostrar a dimensão e os limites, ex:
+Entre com a profundidade 100-10000 [m] 
+unidades sempre dentro de [m].
+
+- Colocar no gráfico a legenda
+
+- titulo profundidade x perda de carga
+
+- é fácil mudar o formato do arquivo gerado pelo gnuplot
+set term nomeDoTerminal
+set out "nome do arquivo"
+replot
+
+- ativar doxygen
+

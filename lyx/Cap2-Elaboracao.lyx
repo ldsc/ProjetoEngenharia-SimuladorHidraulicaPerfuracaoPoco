@@ -1,0 +1,1299 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style apalike
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Elaboração}  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Elaboração
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Elaboração
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Elaboração"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Neste capítulo serão apresentados o estudo de conceitos relacionados ao
+ sistema a ser desenvolvido, a análise de domínio e a identificação de pacotes.
+ 
+\end_layout
+
+\begin_layout Section
+Análise de domínio
+\end_layout
+
+\begin_layout Itemize
+O 
+\shape italic
+software
+\shape default
+ será desenvolvido na Universidade Estadual do Norte Fluminense Darcy Ribeiro
+ com auxílio do corpo docente.
+\end_layout
+
+\begin_layout Itemize
+O 
+\shape italic
+software
+\shape default
+ envolve conceitos abordados nas disciplinas de Engenharia de Poço, Mecânica
+ de Fluidos, Cálculo Numérico e Programação Orientada a Objeto em C++.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+A engenharia de poço é uma disciplina dentro da engenharia de petróleo que
+ envolve todos os processos pertinentes à criação de um poço.
+ Representa uma área da indústria extremamente dinâmica, pois mesmo com
+ experiência prévia e se baseando no histórico de perfuração de outros poços
+ em uma mesma área, a perfuração de dois poços nunca será a mesma.
+ Tratando-se de uma atividade de elevado custo e alta imprevisibilidade,
+ é necessária a criação de projetos de poço a fim de se buscar o melhor
+ resultado, no menor tempo e ao menor custo.
+\end_layout
+
+\begin_layout Standard
+A mecânica dos fluidos é o ramo da engenharia que estuda o comportamento
+ físico dos fluidos e suas propriedades.
+ Os aspectos teóricos e práticos da mecânica dos fluidos são de fundamental
+ importância para a solução de diversos problemas encontrados habitualmente
+ na engenharia de petróleo, sendo suas principais aplicações destinadas
+ ao estudo de escoamentos de líquidos e gases, máquinas hidráulicas, aplicações
+ de pneumática e hidráulica industrial, entre outros.
+ O estudo da mecânica dos fluidos é dividido basicamente em dois ramos,
+ a estática dos fluidos e a dinâmica dos fluidos.
+ A dinâmica dos fluidos é responsável pelo estudo e comportamento dos fluidos
+ em regime de movimento acelerado, no qual se faz presente a ação de forças
+ externas responsáveis pela perda de carga.
+ A mecânica dos fluidos também está diretamente relacionada à representação
+ de sistemas de engenharia, ou seja, a transferência de calor e a manutenção
+ dos equipamentos.
+ Nesta primeira versão considera-se sistemas isotérmicos.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Formulação teórica
+\end_layout
+
+\begin_layout Standard
+A engenharia de perfuração lida principalmente com o fluxo de fluidos através
+ da coluna de perfuração e do espaço anular entre a coluna de perfuração
+ e o poço aberto.
+ Para determinar as perdas de carga durante a perfuração de um poço, é necessári
+o compreender alguns conceitos básicos relacionados às disciplinas citadas.
+ Dentre eles, pode-se destacar o modelo reológico utilizado para explicar
+ o escoamento de um fluido de perfuração, a geometria de um poço, os regimes
+ de fluxo de um fluido e as fórmulas existentes para a perda de carga de
+ um fluido escoando em tubulações e no anular.
+\end_layout
+
+\begin_layout Subsection
+Geometria de poço
+\end_layout
+
+\begin_layout Standard
+Para os cálculos de perda de carga, é necessário definir a geometria do
+ poço, pois esses valores são utilizados nos cálculos de velocidade, representan
+do as áreas por onde passam o fluido.
+ É preciso conhecer as seguintes informações em relação ao poço e à coluna
+ de perfuração:
+\end_layout
+
+\begin_layout Enumerate
+Profundidade total do poço;
+\end_layout
+
+\begin_layout Enumerate
+Diâmetro das fases sendo perfuradas, ou seja, o diâmetro do poço aberto
+ (e da broca); 
+\end_layout
+
+\begin_layout Enumerate
+Diâmetro interno (ID) dos revestimentos usados em todas as fases; 
+\end_layout
+
+\begin_layout Enumerate
+Diâmetro externo (OD) e interno (ID) de todos os tubos de perfuração (
+\shape italic
+drill pipes
+\shape default
+ – DP);
+\end_layout
+
+\begin_layout Enumerate
+Diâmetro externo (OD) e interno (ID) de todos dos comandos de perfuração
+ (
+\shape italic
+drill collars
+\shape default
+ – DC).
+\end_layout
+
+\begin_layout Standard
+Para a elaboração deste software, são sugeridas geometrias usualmente utilizadas
+ em poços do pré-sal no Brasil, como consta nas Figuras 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:DiametrosCaso1"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:DiametrosCaso2"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GeometriaCaso1"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:GeometriaCaso2"
+
+\end_inset
+
+.
+ Apesar de o usuário ter a opção de selecionar qualquer geometria de poço
+ desejada, o uso de geometrias padronizadas garante a saída de resultados
+ mais representativos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/Caso1.PNG
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sequência de diâmetros de revestimento e de poço aberto - Caso 1
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:DiametrosCaso1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/Caso2.PNG
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sequência de diâmetros de revestimento e de poço aberto - Caso 2 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:DiametrosCaso2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/GeometriaCaso1.PNG
+	scale 105
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Geometria de Poço - Caso 1
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GeometriaCaso1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/GeometriaCaso2.PNG
+	scale 105
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Geometria de Poço - Caso 2
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:GeometriaCaso2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Algumas simplificações serão utilizadas quanto à geometria do poço no desenvolvi
+mento deste software: 
+\end_layout
+
+\begin_layout Enumerate
+Todos os poços serão verticais; 
+\end_layout
+
+\begin_layout Enumerate
+Todos os poços serão perfurados em quatro fases;
+\end_layout
+
+\begin_layout Enumerate
+Todas as colunas de perfuração devem possuir uma fração de comandos de perfuraçã
+o (DC), a fim de fornecer peso à broca no fundo do poço;
+\end_layout
+
+\begin_layout Enumerate
+Todas as fases serão revestidas a partir da cabeça de poço, até chegar à
+ sapata do revestimento;
+\end_layout
+
+\begin_layout Enumerate
+Os cálculos de perda de carga serão realizados sempre na profundidade total
+ da sapata do revestimento;
+\end_layout
+
+\begin_layout Enumerate
+Ao atingir a formação, todos os poços possuirão 100m de reservatório perfurado.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Diâmetros padrão de tubulares
+\end_layout
+
+\begin_layout Standard
+Constam abaixo os dados dos tubulares usados na perfuração dos casos de
+ geometria propostos.
+ Os dados foram retirados de tabelas da indústria e serão utilizados nos
+ cálculos de perda de carga.
+\end_layout
+
+\begin_layout Enumerate
+Revestimentos: 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/Tabela com Casing.PNG
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dados relativos aos revestimentos (
+\shape italic
+casings
+\shape default
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Tubulares (
+\shape italic
+drill pipes
+\shape default
+ e 
+\shape italic
+drill collars
+\shape default
+):
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/Tabela com DP-DC.PNG
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dados relativos aos tubulares (
+\shape italic
+drill pipes
+\shape default
+ e 
+\shape italic
+drill collars
+\shape default
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Modelo reológico 
+\end_layout
+
+\begin_layout Standard
+Um modelo reológico é uma descrição matemática das forças viscosas experimentada
+s por um fluido e que são requeridas para o desenvolvimento das equações
+ de perda de carga.
+ O modelo adotado nesse projeto de engenharia será o Newtoniano.
+ Este modelo reológico é ideal para líquidos simples, como fluidos base-água,
+ água salobra e fluidos base-óleo.
+ Para um fluido Newtoniano, as forças viscosas presentes no fluido são uma
+ constante.
+ Esta constante é a viscosidade do fluido, cujo valor é determinado utilizando
+ um reômetro ou um viscosímetro.
+\end_layout
+
+\begin_layout Subsection
+Formulação Físico-Matemática
+\end_layout
+
+\begin_layout Subsubsection
+Velocidade média:
+\end_layout
+
+\begin_layout Standard
+Para o cálculo de perda de carga, é necessária a determinação das velocidades
+ médias nas tubulações e no espaço anular.
+ Para tal, são utilizadas a Equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:velocidadeTubos"
+
+\end_inset
+
+ para a velocidade nas tubulações e a Equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:velocidadeAnular"
+
+\end_inset
+
+ para a velocidade no anular.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+v_{t}=\frac{q}{2,448(d^{2})}\label{eq:velocidadeTubos}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+v_{a}=\frac{q}{2,448(d_{2}^{2}-d_{1}^{2})}\label{eq:velocidadeAnular}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Onde:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $q=$
+\end_inset
+
+vazão do fluido (galões por minuto - gpm);
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v_{t}=$
+\end_inset
+
+velocidade média na tubulação (ft/s);
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v_{a}=$
+\end_inset
+
+velocidade média no anular (ft/s);
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d=$
+\end_inset
+
+diâmetro interno do tubo de perfuração (in);
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d_{2}=$
+\end_inset
+
+diâmetro do poço aberto ou diâmetro interno do revestimento (in);
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d_{1}=$
+\end_inset
+
+diâmetro externo do tubo de perfuração (in).
+\end_layout
+
+\begin_layout Subsubsection
+Regimes de fluxo
+\end_layout
+
+\begin_layout Standard
+Os regimes de fluxo dizem respeito, em mecânica dos fluidos, a como os fluidos
+ se comportam em relação a diversas variáveis.
+ Quanto à direção da trajetória das partículas que o compõe, em relação
+ a dependência do estado de organização do escoamento, os regimes podem
+ ser divididos em:
+\end_layout
+
+\begin_layout Description
+Laminar - As partículas do fluido tendem a percorrer trajetórias paralelas
+ em camadas (lâminas) bem definidas.
+ 
+\end_layout
+
+\begin_layout Description
+Turbulento - As trajetórias das partículas são curvilíneas, não paralelas
+ e alteram-se em sentido, sendo irregulares.
+ Apresentam um padrão de fluxo caótico, formando uma série de minúsculos
+ redemoinhos.
+ 
+\end_layout
+
+\begin_layout Standard
+O regime de fluxo é determinado fisicamente pelo número de Reynolds.
+ A partir da comparação com o número de Reynolds crítico (
+\begin_inset Formula $N_{Rec}=2100$
+\end_inset
+
+) encontrado na literatura, o escoamento pode ser classificado como laminar,
+ se 
+\begin_inset Formula $N_{Re}<N_{Rec}$
+\end_inset
+
+, ou turbulento, se 
+\begin_inset Formula $N_{Re}>N_{Rec}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+A Equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ReynoldsTubo"
+
+\end_inset
+
+ é utilizada para determinar o número de Reynolds dentro de uma tubulação
+ e a Equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ReynoldsAnular"
+
+\end_inset
+
+ é utilizada para determinar o número de Reynolds no anular (entre a coluna
+ de perfuração e o poço aberto/revestido).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+N_{Re,t}=\frac{928\rho vd}{\mu}\label{eq:ReynoldsTubo}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+N_{Re,a}=\frac{757\rho v(d_{2}-d_{1})}{\mu}\label{eq:ReynoldsAnular}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Onde:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $N_{Re,t}=$
+\end_inset
+
+número de Reynolds na tubulação;
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $N_{Re,a}=$
+\end_inset
+
+número de Reynolds no anular;
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\rho=$
+\end_inset
+
+densidade do fluido (
+\shape italic
+pounds per gallon
+\shape default
+ - ppg);
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $v=$
+\end_inset
+
+velocidade média (ft/s);
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\mu=$
+\end_inset
+
+viscosidade do fluido (cp);
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d=$
+\end_inset
+
+diâmetro interno do tubo de perfuração (in);
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d_{2}=$
+\end_inset
+
+diâmetro do poço aberto ou diâmetro interno do revestimento (in);
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $d_{1}=$
+\end_inset
+
+diâmetro externo das tubulações (in);
+\end_layout
+
+\begin_layout Itemize
+Hipóteses simplificadoras
+\end_layout
+
+\begin_layout Standard
+Se a vazão da bomba de lama for baixa o suficiente para que o fluxo seja
+ laminar, o modelo Newtoniano pode ser aplicado para desenvolver as razões
+ matemáticas entre vazão e queda de pressão.
+ Neste desenvolvimento, algumas premissas simplificadoras são feitas para
+ o fluxo laminar:
+\end_layout
+
+\begin_layout Enumerate
+A coluna de perfuração é concêntrica ao revestimento ou poço aberto;
+\end_layout
+
+\begin_layout Enumerate
+A coluna de perfuração não está sendo rotacionada;
+\end_layout
+
+\begin_layout Enumerate
+As seções de poço aberto são circulares e de diâmetro conhecido;
+\end_layout
+
+\begin_layout Enumerate
+O fluido de perfuração é incompressível;
+\end_layout
+
+\begin_layout Enumerate
+O fluxo é isotérmico.
+\end_layout
+
+\begin_layout Standard
+Na realidade, nenhuma dessas premissas é complementamente válida e o sistema
+ de equações resultante não irá descrever perfeitamente o fluxo laminar
+ do fluido de perfuração no poço.
+ Entretanto, para a primeira versão do 
+\shape italic
+software 
+\shape default
+e seu uso em sala de aula, considera-se suficiente.
+\end_layout
+
+\begin_layout Subsubsection
+Perda de carga
+\end_layout
+
+\begin_layout Standard
+As fórmulas utilizadas para a determinação da perda de carga são dependentes
+ do regime de fluxo presente na tubulação/anular.
+ Dessa forma, é necessário determinar o tipo de fluxo previamente à determinação
+ da perda de carga através das Equações 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ReynoldsTubo"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ReynoldsAnular"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Para o fluxo laminar, usa-se a Equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:PerdaCargaTuboLaminar"
+
+\end_inset
+
+ para o cálculo de perda de carga nos tubos de perfuração e a Equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:PerdaCargaAnularLaminar"
+
+\end_inset
+
+ para o cálculo de perda de carga no anular.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{c,t}^{Lam}=\frac{dP_{f}}{dL}=\frac{\mu v}{1500d^{2}}\label{eq:PerdaCargaTuboLaminar}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{c,a}^{Lam}=\frac{dP_{f}}{dL}=\frac{\mu v}{1000(d_{2}-d_{1})^{2}}\label{eq:PerdaCargaAnularLaminar}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Já para o fluxo turbulento, a Equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:PerdaCargaTuboTurbulento"
+
+\end_inset
+
+ para o cálculo de perda de carga nos tubos de perfuração e a Equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:PerdaCargaAnularTurbulento"
+
+\end_inset
+
+ para o cálculo de perda de carga no anular.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{c,t}^{Turb}=\frac{dP_{f}}{dL}=\frac{\rho^{0,75}v^{1,75}\mu^{0,25}}{1800d^{1,25}}\label{eq:PerdaCargaTuboTurbulento}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{c,a}^{Turb}=\frac{dP_{f}}{dL}=\frac{\rho^{0,75}v^{1,75}\mu^{0,25}}{1396(d_{2}-d_{1})^{1,25}}\label{eq:PerdaCargaAnularTurbulento}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Perda de carga total do poço
+\end_layout
+
+\begin_layout Standard
+A perda de carga total do poço será igual à soma da perda de carga devido
+ a cada seção do poço, considerando os diferentes diâmetros internos e externos
+ dos tubos de perfuração (DP e DC) e diferentes diâmetros internos dos revestime
+ntos, tal como exemplificado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Perda-de-carga-Secao"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sendo assim, a perda de carga (
+\begin_inset Formula $\varDelta P$
+\end_inset
+
+) se dará por: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varDelta P$
+\end_inset
+
+ = 
+\begin_inset Formula $\varDelta P_{1}$
+\end_inset
+
+ + 
+\begin_inset Formula $\varDelta P_{2}$
+\end_inset
+
+ + 
+\begin_inset Formula $\varDelta P_{3}$
+\end_inset
+
+ + 
+\begin_inset Formula $\varDelta P_{4}$
+\end_inset
+
++ 
+\begin_inset Formula $\triangle P_{5}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Onde:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varDelta P$
+\end_inset
+
+ = Perda de carga total no poço
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varDelta P_{1}$
+\end_inset
+
+= Perda de carga no interior dos 
+\shape italic
+drill pipes
+\shape default
+ (DP)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varDelta P_{2}$
+\end_inset
+
+= Perda de carga no interior dos 
+\shape italic
+drill collars
+\shape default
+ (DC)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varDelta P_{3}$
+\end_inset
+
+= Perda de carga entre o poço aberto e os 
+\shape italic
+drill collars
+\shape default
+ (DC)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varDelta P_{4}$
+\end_inset
+
+= Perda de carga entre o poço aberto e os 
+\shape italic
+drill pipes
+\shape default
+ (DP) 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\varDelta P_{5}$
+\end_inset
+
+= Perda de carga entre o revestimento e os 
+\shape italic
+drill pipes
+\shape default
+ (DP)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/2018PerdadeCargatotal.PNG
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Perda de carga no poço por seção
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Perda-de-carga-Secao"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Identificação de pacotes – assuntos
+\end_layout
+
+\begin_layout Standard
+Definidos os conceitos físicos e matemáticos da Engenharia de Poço e Mecânica
+ de Fluidos relacionados ao projeto, pode-se explicitar o conjunto de assuntos
+ (ou pacotes) que serão desenvolvidos no software:
+\end_layout
+
+\begin_layout Itemize
+Fluido: representa as características do fluido de perfuração sendo usado.
+ Contém informações de viscosidade e densidade do mesmo.
+ Usado para determinar o regime de fluxo e as perdas de carga do sistema.
+\end_layout
+
+\begin_layout Itemize
+Geometria do poço: contém as informações geométricas referentes ao design
+ do poço.
+ Pode ser entendido como um conjunto de cilindros concêntricos, cada um
+ com raios diferentes.
+ Essas informações são necessárias para o cálculo das velocidades nos tubulares
+ e no espaço anular, além de determinar quais fórmulas de perda de carga
+ serão aplicadas.
+\end_layout
+
+\begin_layout Itemize
+Perda de carga: representa a perda de carga que ocorre no sistema.
+ Pode ser calculada por fase ou para todo o poço.
+\end_layout
+
+\begin_layout Itemize
+Velocidades de fluxo: representa a velocidade com a qual o fluxo ocorre
+ dentro das tubulações e nos espaços anulares.
+ Se baseia na geometria do poço para a sua determinação.
+\end_layout
+
+\begin_layout Itemize
+Regime de fluxo: representa a forma como o fluxo está ocorrendo dentro da
+ coluna de perfuração/poço/revestimento.
+ Através do regime de fluxo, é possível determinar a forma como a perda
+ de carga ocorre no sistema.
+ 
+\end_layout
+
+\begin_layout Itemize
+Gráficos: trata-se de uma forma de representação dos resultados obtidos
+ pelo software, onde as grandezas profundidade (metros) e perda de carga
+ (psi) são plotadas.
+ 
+\end_layout
+
+\begin_layout Itemize
+Resultados: representa as formas de visualização e exportação dos dados
+ calculados pelo software.
+\end_layout
+
+\begin_layout Itemize
+Simulador: é o gerenciador do sistema.
+\end_layout
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Section
+Diagrama de pacotes – assuntos
+\end_layout
+
+\begin_layout Standard
+A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Diagrama-de-Pacotes"
+
+\end_inset
+
+ representa o diagrama de pacotes para o software SHPP.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/2018DiagramadePacotes.jpeg
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Pacotes para o 
+\shape italic
+software
+\shape default
+ SHPP
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-Pacotes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

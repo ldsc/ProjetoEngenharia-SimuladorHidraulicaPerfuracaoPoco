@@ -1,0 +1,875 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement p
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Teste
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Teste"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter - Teste} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Todo projeto de engenharia passa por uma etapa de testes.
+ Neste capítulo apresentamos alguns testes do software desenvolvido.
+ Estes testes devem dar resposta aos diagramas de caso de uso inicialmente
+ apresentados (diagramas de caso de uso geral e específicos).
+\end_layout
+
+\begin_layout Section
+Teste 1: Perda de carga para a fase 1
+\end_layout
+
+\begin_layout Standard
+No primeiro teste, o usuário opta por manter as propriedades 
+\shape italic
+default
+\shape default
+ do fluido sugeridas pelo software (viscosidade=25cp e densidade=10ppg).
+ O usuário seleciona os dados de geometria de poço referentes ao Caso 1
+ através de entrada de dados por arquivo de disco, em que deve ser informado
+ o nome do arquivo .txt (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:T11"
+
+\end_inset
+
+).
+ Os dados do arquivo selecionado são mostrados na Tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Caso1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Diâmetro de Poço
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Casing OD (in)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Casing ID (in)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+36.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+28.875
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+26.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+19.125
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17.500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+13.375
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12.715
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12.250
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dados de geometria de poço referentes ao Caso 1
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Caso1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Após a leitura de dados do arquivo, foi testada a opção de salvar os resultados
+ de perda de carga para a Fase 1 em arquivo .txt e, em seguida, plotar estes
+ resultados em gráfico através do software Gnuplot (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:T12"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+A imagem foi salva no formato .png (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Graf Fase 1"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/Teste1_1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela inicial do programa mostrando o menu para entrada de dados
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:T11"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/Teste1_2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Menu de escolha para exportar os dados 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:T12"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/grafico1.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico gerado para a perda de carga na Fase 1
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Graf Fase 1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Teste 2: Perda de carga de todas as fases
+\end_layout
+
+\begin_layout Standard
+No segundo teste, o usuário opta por modificar as propriedades 
+\shape italic
+default
+\shape default
+ do fluido (viscosidade=25cp e densidade=10ppg).
+ Assim, a função de entrada de dados pelo usuário.
+ O usuário deve informar o novo valor de viscosidade e o novo valor de densidade.
+\end_layout
+
+\begin_layout Standard
+Posteriormente, o usuário seleciona os dados de geometria de poço referentes
+ ao Caso 2 (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:T21"
+
+\end_inset
+
+), fornecendo o nome do arquivo no qual estão salvas as informações.
+ Os dados de geometria do Caso 2 são mostrados na Tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Caso2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Diâmetro de Poço
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Casing OD (in)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Casing ID (in)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+36.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+30.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+28.875
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+26.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+18.625
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+17.755
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.750
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10.625
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dados de geometria de poço referentes ao Caso 2
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Caso2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Após a leitura de dados do arquivo, foi testada a opção de plotar o resultado
+ de perda de carga para todas as fases através do software Gnuplot (Figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:T22"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+A imagem foi salva no formato .png (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Graf Fase 2"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/Teste2_1.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Tela inicial do programa mostrando o menu para entrada de dados
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:T21"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/Teste2_2.png
+	scale 45
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Menu de escolha para exportar os dados
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:T22"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/grafico2.png
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Gráfico gerado para a perda de carga em todas as fases 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Graf Fase 2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

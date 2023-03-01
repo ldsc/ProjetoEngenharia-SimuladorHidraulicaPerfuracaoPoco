@@ -1,0 +1,921 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement ph
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style apalike
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Especificação}  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Especificação
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Concepção
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+especificação
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se neste capítulo do projeto de engenharia a concepção, a especificaçã
+o do sistema a ser modelado e desenvolvido.
+\end_layout
+
+\begin_layout Section
+Nome do sistema/produto 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle" tabularwidth="14cm">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top" width="8cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Nome
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Simulador de Hidráulica de Perfuração de Poço - SHPP
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Componentes principais
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Sistema para cálculo de perda de carga previamente à perfuração de um poço
+ de petróleo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Missão
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ferramenta de treinamento/ensino na área de engenharia de poço
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Especificação
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+especificação
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O software descrito nesse projeto tem como função simular os cálculos relacionad
+os à hidráulica de perfuração de poço, em específico relacionados às perdas
+ de cargas que ocorrem ao longo da coluna de perfuração, broca e anular.
+ Os resultados desses cálculos estarão disponíveis em um arquivo em modo
+ texto e em gráficos.
+ O software irá interagir com o usuário, de forma a obter informações sobre
+ a geometria do poço, tubulares e fluido de perfuração utilizados.
+ A entrada do usuário será usada nos cálculos.
+ Ao final da simulação, será gerado um gráfico de perda de carga por seção,
+ e essa informação será exportada para um arquivo em modo texto.
+\end_layout
+
+\begin_layout Standard
+Programas externos: o presente software utiliza o software externo 
+\shape italic
+gnuplot
+\shape default
+ para plotar gráficos.
+ 
+\end_layout
+
+\begin_layout Standard
+\align block
+Licença: o presente software tem licença GPL 2.0, conforme consta no site
+ http://
+\end_layout
+
+\begin_layout Standard
+\align block
+softwarelivre.org.
+ 
+\end_layout
+
+\begin_layout Subsection
+Requisitos funcionais
+\end_layout
+
+\begin_layout Standard
+Apresenta-se a seguir os requisitos funcionais do sistema
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+coloque aqueles que fazem sentido para seu sistema
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle" tabularwidth="14cm">
+<column alignment="block" valignment="top">
+<column alignment="block" valignment="top" width="11.5cm">
+<row>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RF-01
+\end_layout
+
+\end_inset
+</cell>
+<cell mroffset="2cm" alignment="block" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+O usuário deverá entrar com informações sobre o fluido de perfuração.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle" tabularwidth="14cm">
+<column alignment="center" valignment="top">
+<column alignment="block" valignment="top" width="11.5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RF-02
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+O usuário deverá informar o nome do arquivo texto de onde serão lidas as
+ informações de geometria de poço.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle" tabularwidth="14cm">
+<column alignment="center" valignment="top">
+<column alignment="block" valignment="top" width="11.5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RF-03
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+O usuário poderá escolher exportar os resultados como arquivo texto.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle" tabularwidth="14cm">
+<column alignment="center" valignment="top">
+<column alignment="block" valignment="top" width="11.5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RF-04
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+O usuário poderá plotar seus resultados em um gráfico.
+ O gráfico poderá ser salvo como imagem.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle" tabularwidth="14cm">
+<column alignment="center" valignment="top">
+<column alignment="block" valignment="top" width="11.5cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RF-05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nos casos em que o software for plotar gráficos, o software externo 
+\shape italic
+gnuplot
+\shape default
+ http://www.gnuplot.org deverá estar instalado no sistema.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Requisitos não funcionais
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle" tabularwidth="14cm">
+<column alignment="center" valignment="top">
+<column alignment="block" valignment="top" width="11cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RNF-01
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Os cálculos devem ser feitos utilizando-se fórmulas provenientes da Mecânica
+ dos Fluidos.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="1" columns="2">
+<features tabularvalignment="middle" tabularwidth="14cm">
+<column alignment="center" valignment="top">
+<column alignment="block" valignment="top" width="11cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+RNF-02
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="block" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+O programa deverá ser multi-plataforma, podendo ser executado em 
+\emph on
+Windows
+\emph default
+, 
+\emph on
+GNU/Linux
+\emph default
+ ou 
+\emph on
+Mac
+\emph default
+.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Casos de uso
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Casos de uso
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+do software
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A Tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Exemplo-de-um-caso-de-uso (tabela)"
+
+\end_inset
+
+ mostra um cenário de funcionamento do programa.
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Exemplo de caso de uso geral
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Exemplo-de-um-caso-de-uso (tabela)"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="block" valignment="top" width="10cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nome do caso de uso:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cálculo de perda de carga em um poço.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Resumo/descrição:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Determinação da perda de carga por seção perfurada.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Etapas: 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1.
+ Inserir dados do fluido de perfuração e da geometria do poço.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+2.
+ Calcular perdas de carga relacionadas à hidráulica de poço.
+\end_layout
+
+\begin_layout Plain Layout
+3.
+ Analisar os resultados obtidos.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cenários alternativos:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Um cenário alternativo envolve uma entrada errada do usuário (por exemplo,
+ entrar com um elemento da coluna de perfuração maior do que o diâmetro
+ da fase sendo perfurada), o que iria interferir com a grandeza do problema
+ real.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Diagrama de caso de uso geral
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ do software
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O diagrama de caso de uso geral da Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-caso-uso-geral"
+
+\end_inset
+
+ mostra o usuário inserindo dados do fluido e do poço, calculando as perdas
+ de carga e analisando os resultados.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/2018CasodeUsoGeral.PNG
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de caso de uso geral
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-caso-uso-geral"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Diagrama de caso de uso específico
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+ do software
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O diagrama de caso de uso específico da Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-caso-de-uso-especifico:Titulo"
+
+\end_inset
+
+ mostra o usuário inserindo dados do fluido e do poço.
+ O simulador calcula, então, as perdas de carga.
+ O usuário escolhe a opção de salvar em modo texto e plotar um gráfico com
+ os resultados referentes à primeira fase do poço.
+ Posteriormente, o usuário analisa os resultados.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/2018CasodeUsoEspecífico.png
+	scale 60
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de caso de uso específico - Analisando resultados para a Fase 1
+ do poço 
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-caso-de-uso-especifico:Titulo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

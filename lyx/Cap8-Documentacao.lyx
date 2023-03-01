@@ -1,0 +1,579 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Documentação 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter - Documentação} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Apresenta-se neste capítulo a documentação de uso dosoftware SHPP - Simulador
+ de Hidráulica de Perfuração de Poço.
+ Esta documentação tem o formato de uma apostila que explica passo a passo
+ como usar o software.
+ 
+\end_layout
+
+\begin_layout Section
+Documentação do usuário
+\end_layout
+
+\begin_layout Standard
+Descreve-se aqui o manual do usuário, um guia que explica, passo a passo
+ a forma de instalação e uso do software desenvolvido.
+\end_layout
+
+\begin_layout Subsection
+Como executar o software
+\end_layout
+
+\begin_layout Standard
+Abrir o terminal, ir para o diretório onde os códigos se encontram, compilar
+ o programa e executá-lo.
+\end_layout
+
+\begin_layout Enumerate
+Para compilar o programa, digitar o seguinte comando no terminal:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+g++ CGnuplot.cpp CFluido.cpp CGeometriaPoco.cpp CPerdaDeCarga.cpp CResultados.cpp
+ CSHPP.cpp main.cpp -o NomedoArquivoTeste
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Para executar o programa, digitar o seguinte comando no terminal:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+./NomedoArquivoTeste
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+A interface inicial do software será executada.
+\end_layout
+
+\begin_layout Enumerate
+Inicialmente, o usuário pode escolher entre a opção de manter as propriedades
+ 
+\shape italic
+default 
+\shape default
+do fluido ou modificá-las, escolhendo entre as opções:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Opção 1: Manter as propriedades - digite 'n'
+\end_layout
+
+\begin_layout Enumerate
+Opção 2: Modificar as propriedades - digite 's'
+\end_layout
+
+\begin_layout Standard
+Caso o usuário escolha a Opção 2, o software irá pedir os novos valores
+ para as propriedades do fluido, e serão dadas as instruções de entrada
+ de dados pelo teclado.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Posteriormente, independente da opção escolhida, o usuário deverá entrar
+ com o nome de um arquivo texto no qual estão armazenados os dados de geometria
+ do poço, fornecidos pelo software.
+ Existem dois arquivos possíveis: caso1 e caso2.
+ O nome do arquivo deve ser digitado, sem a necessidade de informar o formato
+ da extensão.
+\end_layout
+
+\begin_layout Enumerate
+Após carregar os dados, o software irá informar os valores de perda de carga
+ para cada fase do poço selecionado.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Em seguida, um menu com diversas opções de saída de dados será mostrado.
+ O usuário pode escolher entre as opções abaixo:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Saída de dados em arquivo .txt: Os dados de perda de carga para a fase escolhida
+ serão salvos em um arquivo .txt.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Plotar os dados com auxílio do Gnuplot: O gráfico de perda de carga será
+ plotado para a fase escolhida, e será salvo em formato .png.
+\end_layout
+
+\begin_layout Standard
+Caso o usuário escolha a opção de plotar os dados, deverá ser informado
+ o nome do arquivo em que o gráfico será salvo no diretório.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+O usuário pode escolher mais de uma opção de saída de dados ou optar por
+ sair do programa, selecionando a última opção do menu.
+\end_layout
+
+\begin_layout Standard
+Veja no Capítulo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "chap:Teste"
+
+\end_inset
+
+ - Teste alguns exemplos de uso do software.
+\end_layout
+
+\begin_layout Section
+Documentação para desenvolvedor
+\end_layout
+
+\begin_layout Standard
+Apresenta-se nesta seção a documentação para o desenvolvedor, isto é, informaçõe
+s para usuários que queiram modificar, aperfeiçoar ou ampliar este software.
+\end_layout
+
+\begin_layout Subsection
+Dependências
+\end_layout
+
+\begin_layout Standard
+Para compilar o software é necessário atender as seguintes dependências:
+\end_layout
+
+\begin_layout Itemize
+No sistema operacional GNU/Linux:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Instalar o compilador g++ da GNU disponível em 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://gcc.gnu.org"
+target "http://gcc.gnu.org"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Para instalar no GNU/Linux use o comando 
+\family typewriter
+yum install gcc
+\family default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+No sistema operacional Windows:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Instalar um compilador de sua escolha.
+\end_layout
+
+\begin_layout Itemize
+Recomenda-se a instalação do Dev C++.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Software externo Gnuplot:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+O software 
+\family typewriter
+gnuplot
+\family default
+, disponível no endereço 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.gnuplot.info/"
+
+\end_inset
+
+, deve estar instalado.
+\end_layout
+
+\begin_layout Itemize
+É possível que haja necessidade de setar o caminho para execução do 
+\family typewriter
+gnuplot
+\family default
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Dependência de arquivos com dados:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+O programa depende da existência de um arquivo contendo os dados de geometria
+ de poço, no formato .txt.
+\end_layout
+
+\begin_layout Itemize
+O formato dos dados no arquivo é mostrado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Formato-de-preenchimento"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/formatodados.PNG
+	scale 80
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Formato de preenchimento do arquivo contendo os dados de geometria de poço
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Formato-de-preenchimento"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Como gerar a documentação usando doxygen
+\end_layout
+
+\begin_layout Standard
+A documentação do código do software deve ser feita usando o padrão JAVADOC,
+ conforme apresentada no Capítulo - Documentação, do livro texto da disciplina.
+ Depois de documentar o código, use o software 
+\family typewriter
+doxygen 
+\family default
+para gerar a documentação do desenvolvedor no formato html.
+ O software 
+\family typewriter
+doxygen
+\family default
+ lê os arquivos com os códigos (*.h e *.cpp) e gera uma documentação muito
+ útil e de fácil navegação no formato html.
+ 
+\end_layout
+
+\begin_layout Itemize
+Veja informações sobre uso do formato JAVADOC em:
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.stack.nl/~dimitri/doxygen/manual/docblocks.html"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Veja informações sobre o software 
+\family typewriter
+doxygen
+\family default
+ em
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.stack.nl/~dimitri/doxygen/"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Passos para gerar a documentação usando o 
+\family typewriter
+doxygen
+\family default
+.
+\end_layout
+
+\begin_layout Itemize
+Documente o código usando o formato JAVADOC.
+ Um bom exemplo de código documentado é apresentado nos arquivos da biblioteca
+ CGnuplot, abra os arquivos 
+\family typewriter
+CGnuplot.h
+\family default
+ e 
+\family typewriter
+CGnuplot.cpp
+\family default
+ no editor de texto e veja como o código foi documentado.
+\end_layout
+
+\begin_layout Itemize
+Abra um terminal.
+\end_layout
+
+\begin_layout Itemize
+Vá para o diretório onde esta o código.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+cd /caminho/para/seu/codigo
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Peça para o 
+\family typewriter
+doxygen
+\family default
+ gerar o arquivo de definições (arquivo que diz para o doxygem como deve
+ ser a documentação).
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+dogygen -g
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Peça para o 
+\family typewriter
+doxygen
+\family default
+ gerar a documentação.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+
+\family typewriter
+doxygen
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Verifique a documentação gerada abrindo o arquivo html/index.html.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout LyX-Code
+firefox html/index.html
+\end_layout
+
+\begin_layout Standard
+ou
+\end_layout
+
+\begin_layout LyX-Code
+chrome html/index.html
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

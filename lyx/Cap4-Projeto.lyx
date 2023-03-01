@@ -1,0 +1,692 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement p
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Projeto 
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Projeto-do-Sistema"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter - Projeto} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Neste capítulo do projeto de engenharia veremos questões associadas ao projeto
+ do sistema, incluindo protocolos, recursos, plataformas suportadas, inplicações
+ nos diagramas feitos anteriormente, diagramas de componentes e implantação.
+ Na segunda parte revisamos os diagramas levando em conta as decisões do
+ projeto do sistema.
+\end_layout
+
+\begin_layout Section
+Projeto do sistema
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Projeto do sistema
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Projeto-do-sistema"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Depois da análise orientada a objeto desenvolve-se o projeto do sistema,
+ o qual envolve etapas como a definição dos protocolos, da interface API,
+ o uso de recursos, a subdivisão do sistema em subsistemas, a alocação dos
+ subsistemas ao hardware e a seleção das estruturas de controle, a seleção
+ das plataformas do sistema, das bibliotecas externas, dos padrões de projeto,
+ além da tomada de decisões conceituais e políticas que formam a infraestrutura
+ do projeto.
+\end_layout
+
+\begin_layout Standard
+Deve-se definir padrões de documentação, padrões para o nome das classes,
+ padrões de retorno e de parâmetros em métodos, características da interface
+ do usuário e características de desempenho.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Plataformas
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+O software irá funcionar no sistema operacional GNU/Linux, sendo desenvolvido
+ no Windows e testado no GNU/Linux.
+\end_layout
+
+\begin_layout Itemize
+O programa é multiplataforma, visto que a linguagem C++ possui suporte em
+ diversos sistemas operacionais.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Bibliotecas
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Neste projeto será utilizada a biblioteca padrão da linguagem C++.
+\end_layout
+
+\begin_layout Itemize
+O programa será desenvolvido por meio da interface Dev C++ e Visual Studio
+ (Windows).
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Arquivos externos
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+O software SHPP gera arquivos no formato .txt e .png para apresentação dos
+ resultados de perda de carga calculados por fase.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Recursos
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+O programa utiliza o HD, o processador, o teclado, a memória, a tela e os
+ demais componentes internos do computador.
+\end_layout
+
+\begin_layout Itemize
+Será utilizado um arquivo de dados no formato .txt para leitura das informações
+ de geometria de poço.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Projeto orientado a objeto – POO
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+POO
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Projeto orientado a objeto
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Projeto-orientado-a-objeto"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O projeto orientado a objeto é a etapa posterior ao projeto do sistema.
+ Baseia-se na análise, mas considera as decisões do projeto do sistema.
+ Acrescenta à análise desenvolvida as características da plataforma escolhida
+ (hardware, sistema operacional e linguagem de softwareção).
+ Passa pelo maior detalhamento do funcionamento do software, acrescentando
+ atributos e métodos que envolvem a solução de problemas específicos não
+ identificados durante a análise.
+\end_layout
+
+\begin_layout Standard
+Envolve a otimização da estrutura de dados e dos algoritmos, a minimização
+ do tempo de execução, de memória e de custos.
+ Existe um desvio de ênfase para os conceitos da plataforma selecionada.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Efeitos do projeto no modelo
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+modelo
+\end_layout
+
+\end_inset
+
+ estrutural
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Efeito-do-projeto-no-modelo-estrutural"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Dependências e restrições do SHPP:
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+O software SHPP deve ser executado na plataforma GNU/Linux.
+\end_layout
+
+\begin_layout Itemize
+O programa depende da instalação do software externo Gnuplot.
+\end_layout
+
+\begin_layout Itemize
+A biblioteca gráfica CGnuplot é utilizada.
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Efeitos do projeto no modelo
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+modelo
+\end_layout
+
+\end_inset
+
+ dinâmico
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Efeito-do-projeto-no-modelo-dinamico"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Essa etapa não envolveu mudanças no projeto, visto que os diagramas de sequência
+, comunicação, máquina de estado e atividades foram modificados durante
+ o desenvolvimento do código.
+\end_layout
+
+\begin_layout Subsubsection
+Efeitos do projeto nos atributos
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+atributos
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Efeito-do-projeto-nos-atributos"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Atributos para leitura de dados do disco foram implementados (arquivos .txt).
+\end_layout
+
+\begin_layout Subsubsection
+Efeitos do projeto nos métodos
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+métodos
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Efeitos do projeto nos métodos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A classe externa Gnuplot permitiu o uso de uma função para salvar os gráficos
+ gerados em formato png.
+\end_layout
+
+\begin_layout Itemize
+Além da leitura de disco, o método de inserção de dados pelo usuário por
+ meio do teclado foi implementado.
+\end_layout
+
+\begin_layout Subsubsection
+Efeitos do projeto nas heranças
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+heranças
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Efeitos do projeto nas heranças
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Heranças
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Essa etapa não envolveu mudanças no projeto.
+\end_layout
+
+\begin_layout Subsubsection
+Efeitos do projeto nas associações
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Efeitos do projeto nas associações
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Associações
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Essa etapa não envolveu mudanças no projeto.
+\end_layout
+
+\begin_layout Subsubsection
+Efeitos do projeto nas otimizações
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+otimizações
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Após os primeiros testes, uma nova forma de representação dos resultados
+ foi criada.
+ O novo método de saída de dados consistiu em plotar a perda de carga para
+ todas as fases em um mesmo gráfico.
+ Esse gráfico permitiu comparar os valores de perda de carga correspondentes
+ a cada fase.
+\end_layout
+
+\begin_layout Section
+Diagrama de componentes
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de componentes
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Diagrama-de-componentes"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O diagrama de componentes mostra a forma como os componentes do software
+ se relacionam, suas dependências.
+ 
+\end_layout
+
+\begin_layout Standard
+A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-componentes"
+
+\end_inset
+
+ apresenta o diagrama de componentes do software SHPP.
+ O simulador acessa as bibliotecas C++.
+ O subsistema biblioteca representa o simulador SHPP e contém os arquivos
+ 
+\shape italic
+header
+\shape default
+ e 
+\shape italic
+implementation
+\shape default
+ das classes CFluido, CGeometriaPoco, CPerdaDeCarga e CResultados.
+ O subsistema biblioteca inclui os arquivos das classes citadas, e a geração
+ dos objetos fluido.obj, geometria.obj, perdaCarga.obj e resultados.obj depende
+ dos arquivos CFluido.h, CFluido.cpp, CGeometriaPoco.h, CGeometriaPoco.cpp,
+ CPerdaDeCarga.h, CPerdaDeCarga.cpp, CResultados.h e CResultados.cpp.
+ O subsistema biblioteca Gnuplot, um subsistema externo para geração de
+ gráficos, inclui os arquivos de código da biblioteca CGnuplot e a biblioteca
+ em si.
+ O software executável a ser gerado depende da biblioteca gerada, dos arquivos
+ da biblioteca CGnuplot e do banco de dados.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/2018DiagramadeComponentes.jpeg
+	lyxscale 90
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de componentes
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-componentes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de implantação
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Diagrama de execução
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Diagrama-de-execução"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O diagrama de implantação é um diagrama de alto nível que inclui relações
+ entre o sistema e o hardware e que se preocupa com os aspectos da arquitetura
+ computacional escolhida.
+ Seu enfoque é o hardware, a configuração dos nós em tempo de execução.
+ 
+\end_layout
+
+\begin_layout Standard
+Veja na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "cap:Diagrama-de-implantação."
+
+\end_inset
+
+ o diagrama de implantação do software SHPP.
+ O Simulador acessa os arquivos de dados no disco rígido, contendo as informaçõe
+s de geometria do poço.
+ Os insumos e resultados são dispostos ao usuário por meio do teclado e
+ monitor.
+ Os resultados das simulações são armazenados no disco rígido.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Luísa/Desktop/SHPP/Lyx/Imagens/2018DiagramadeImplantacao.PNG
+	lyxscale 90
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de implantação.
+\begin_inset CommandInset label
+LatexCommand label
+name "cap:Diagrama-de-implantação."
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
